@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin|marwadi university</title>
+    <link rel="icon" href="./images/favicon-removebg-preview.png" type="image/icon type">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+</head>
+<style>
+  body{
+    background:rgb(231, 231, 240);
+  }
+  h4{
+    font-family: serif;
+  }
+</style>
+<body  id="myDiv">
+  <div class="row" style="padding: 15px; margin: auto;height: auto;">
+    <div class="container" style="width: 500px; height: 300px; border: 1px solid black; margin-top: 10%; margin-bottom: 2%; background-image:url(https://www.marwadiuniversity.ac.in/wp-content/uploads/2022/07/parallax.jpg);">
+      <form class="custom-form contact-form" action="database.php" method="post" role="form" onsubmit="return check()">
+      <div class="hearer" style="color: white;"> <center><h4>Admin Credentials</h4></center></div> 
+      <br>
+        <br>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-12">
+            <input type="text" name="Email" id="admin_email" class="form-control" placeholder="Enter your Email" required>  
+      <br><br>
+          </div>
+          <div class="col-lg-6 col-md-6 col-12">
+            
+            <input type="password" name="admin_password" id="admin_password" class="form-control" placeholder="Password" required>
+          </div> <br><br>
+        </div>
+    <div class="submitbtn">
+        <button type="submit" class="form-control bg-info"> Submit</button>
+  </div>
+      </form>
+    </div>
+  </div>       
+</body>
+</html>
+<script>
+  function check() {
+     var a_email = document.getElementById("admin_email").value;
+     var a_password = document.getElementById("admin_password").value;
+ 
+     if (a_email !== "marwadi@gmail.com" || a_password !== "marwadi123") {
+         alert("Please Check your email and password !!!");
+         return false; // Prevent form submission
+     } else {
+         alert("Welcome !!!");
+         return true; // Allow form submission
+     }
+ }
+ </script>
+<script>
+  const div = document.getElementById("myDiv");
+  div.addEventListener("contextmenu", (e) => {e.preventDefault()});
+  </script>
